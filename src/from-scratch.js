@@ -11,18 +11,16 @@ class Quadrilateral {
 }
 
 /*
-The extends keyword below allows the Rectangle class to inherit all 
-the properties and methods present in the quadrilateral class
+The `extends` keyword allows the Rectangle class to inherit all the properties and methods from the Quadrilateral class.
+
+The `super` function calls the constructor of the class we're inheriting from, which in this case is the Quadrilateral class.
+By using `super(side1, side2, side1, side2)`, we pass the side lengths to the parent class (Quadrilateral).
+The Quadrilateral class then uses these values to define properties for each side (side1, side2, side3, side4).
+This allows the Rectangle class to access these side properties and methods like `getPerimeter`.
 */
+
 class Rectangle extends Quadrilateral{
   constructor(side1, side2){
-    /*
-    The super function calls the constructor of tbe class were inheriting from.
-    In this case, it's the Quadrilateral class.
-    By using super(side1, side2, side1, side2), we send the side lengths to the parent class (Quadrilateral).
-    The parent class then uses those values to create properties for each side (side1, side2, side3, side4).
-    This allows the Rectangle class to have access to these side properties and methods like getPerimeter.
-    */
     super(side1, side2, side1, side2);
   }
   getArea(){
